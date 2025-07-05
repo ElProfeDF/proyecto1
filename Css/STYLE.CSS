@@ -1,0 +1,265 @@
+/* ============================================= */
+/* ESTILOS GENERALES (BASE PARA ESCRITORIO)    */
+/* ============================================= */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* --- Estilos del Encabezado --- */
+.site-header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    position: relative; 
+}
+
+.header-column {
+    display: flex;
+    align-items: center;
+}
+
+
+.header-column:first-child {
+    justify-content: flex-start;
+}
+
+.header-column:last-child {
+    justify-content: flex-end;
+}
+
+.logo-container img {
+    height: 50px; 
+    width: auto;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Botón Hamburguesa oculto en escritorio */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Menú principal en escritorio */
+#main-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; 
+}
+
+#main-menu li {
+    margin-left: 25px;
+}
+
+#main-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#main-menu li a:hover {
+    color: #9a50ff;
+}
+
+
+/* --- Estilos del Cuerpo --- */
+.features-section {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 5%;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature-column {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.feature-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text-column .content-wrapper {
+    max-width: 450px;
+    text-align: center;
+}
+
+.text-column h2 {
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.text-column p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* --- Estilos del Footer --- */
+footer.site-footer {
+    background-color: #f5f5f5; 
+    color: #6f42c1; 
+    padding: 40px 5%;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    flex-basis: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-media-links a {
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.social-media-links a:hover {
+    transform: scale(1.1);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 175px;
+    width: auto;
+}
+
+
+/* ============================================= */
+/* MEDIA QUERIES RESPONSIVE                      */
+/* ============================================= */
+
+/* --- TABLETS (Hasta 992px) --- */
+@media (max-width: 992px) {
+    /* --- Cambios en el Encabezado --- */
+    
+    /* Mostramos el botón hamburguesa */
+    .hamburger-button {
+        display: block; 
+    }
+
+    /* Ocultamos el menú de navegación horizontal */
+    #main-menu {
+        display: none; 
+        
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+        flex-direction: column;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    
+        #main-menu.menu-open {
+        display: flex;
+    }
+    
+    #main-menu li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #main-menu li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    #main-menu li:last-child a {
+        border-bottom: none;
+    }
+    .text-column h2 {
+        font-size: 1.2rem; /* Reducimos el tamaño de los títulos */
+    }
+    .text-column p {
+        font-size: 0.8rem; /* Reducimos el tamaño de los títulos */
+    }
+}
+
+
+/* --- MÓVILES (Hasta 768px) --- */
+@media (max-width: 768px) {
+    /* --- Cambios en el Cuerpo --- */
+    
+    .feature-row {
+        /* Apilamos las columnas de imagen y texto */
+        flex-direction: column;
+    }
+    
+    /* En la segunda fila, invertimos el orden para que la imagen siga arriba */
+    .feature-row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    .text-column h2 {
+        font-size: 1.4rem; /* Reducimos el tamaño de los títulos */
+    }
+
+    /* --- Cambios en el Footer --- */
+
+    footer.site-footer {
+        flex-direction: column; /* Apilamos las columnas del footer */
+        align-items: center; /* Centramos las columnas apiladas */
+        text-align: center;
+    }
+
+    .contact-item {
+       justify-content: center; /* Centramos los items de contacto */
+    }
+    
+}
