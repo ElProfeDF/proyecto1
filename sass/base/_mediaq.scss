@@ -1,0 +1,108 @@
+/* ============================================= */
+/* MEDIA QUERIES RESPONSIVE                      */
+/* ============================================= */
+
+/* --- TABLETS (Hasta 992px) --- */
+@media (max-width: 992px) {
+    /* --- Cambios en el Encabezado --- */
+    
+    /* Mostramos el botón hamburguesa */
+    .hamburger-button {
+        display: block; 
+    }
+
+    /* Ocultamos el menú de navegación horizontal */
+    #main-menu {
+        display: none; 
+        
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+        flex-direction: column;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    
+        #main-menu.menu-open {
+        display: flex;
+    }
+    
+    #main-menu li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #main-menu li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    #main-menu li:last-child a {
+        border-bottom: none;
+    }
+    .text-column h2 {
+        font-size: 1.2rem; /* Reducimos el tamaño de los títulos */
+    }
+    .text-column p {
+        font-size: 0.8rem; /* Reducimos el tamaño de los títulos */
+    }
+}
+
+
+/* --- MÓVILES (Hasta 768px) --- */
+@media (max-width: 768px) {
+    /* --- Cambios en el Cuerpo --- */
+    
+    .feature-row {
+        /* Apilamos las columnas de imagen y texto */
+        flex-direction: column;
+    }
+    
+    /* En la segunda fila, invertimos el orden para que la imagen siga arriba */
+    .feature-row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    .text-column h2 {
+        font-size: 1.4rem; /* Reducimos el tamaño de los títulos */
+    }
+
+    /* --- Cambios en el Footer --- */
+
+    footer.site-footer {
+        flex-direction: column; /* Apilamos las columnas del footer */
+        align-items: center; /* Centramos las columnas apiladas */
+        text-align: center;
+    }
+
+    .contact-item {
+       justify-content: center; /* Centramos los items de contacto */
+    }
+    
+}
+/* --- ESTILOS GENERALES Y ENCABEZADO --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+main {
+    padding-bottom: 60px; /* Espacio antes del pie de página */
+}
+
+/* --- ESTILOS GENERALES Y ENCABEZADO --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+main {
+    padding-bottom: 60px; /* Espacio antes del pie de página */
+}

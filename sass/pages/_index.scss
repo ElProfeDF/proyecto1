@@ -1,0 +1,85 @@
+/* ======================================================= */
+/* Estilos para index                               */
+/* ======================================================= */
+
+/* 1. Estilos para los contenedores full-width en el index */
+.features-section.index {
+    width: 100%;
+}
+
+/* Ajustamos el ancho del contenido solo en las columnas del index */
+.features-section.index .feature-column {
+    max-width: 550px;
+    flex-shrink: 1;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* 2. Definimos las animaciones  */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 3. Estilos base para CADA contenedor de fila del index */
+.features-section.index .feature-row {
+    padding: 60px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 1; 
+}
+
+/* Fondos intercalados */
+.features-section.index .feature-row:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.features-section.index .feature-row:nth-child(even) {
+    background-color: #ffffff;
+}
+
+@supports (animation-timeline: view()) {
+    
+        .features-section.index .feature-row {
+        opacity: 0;
+    }
+
+    /* Asignamos la animación de la derecha a las filas impares */
+    .features-section.index .feature-row:nth-child(odd) {
+        animation: slideInFromRight 1s linear forwards;
+    }
+
+    /* Asignamos la animación de la izquierda a las filas pares */
+    .features-section.index .feature-row:nth-child(even) {
+        animation: slideInFromLeft 1s linear forwards;
+    }
+
+    /* Le decimos a la animación que se active con el scroll */
+    .features-section.index .feature-row {
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+}

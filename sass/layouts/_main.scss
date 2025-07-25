@@ -1,0 +1,46 @@
+/* --- Estilos del Cuerpo --- */
+.features-section {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 5%;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature-column {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.feature-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text-column .content-wrapper {
+    max-width: 450px;
+    text-align: center;
+}
+
+.text-column h2 {
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.text-column p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}

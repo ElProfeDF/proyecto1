@@ -1,0 +1,94 @@
+/* --- ESTILOS PARA LA PÁGINA NOSOTROS --- */
+
+/* --- ESTILOS para la sección del encabezado --- */
+
+.features-section.encabezado.nosotros {
+    max-width: 1200px;  
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+    padding-left: 15px; 
+    padding-right: 15px;
+}
+
+
+.features-section.encabezado.nosotros .image-column img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+/* --- Estilos para la sección de personas (Tarjetas con efecto de giro) --- */
+
+/* Contenedor principal de las filas de personas */
+.features-section.personas.nosotros {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    padding: 40px 20px;
+    gap: 30px; 
+}
+
+/* Estilo para cada fila */
+.feature-row.personas.nosotros {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    width: 100%;
+    flex-wrap: wrap; 
+}
+
+/* Contenedor de la tarjeta para establecer la perspectiva 3D */
+.flip-card {
+    background-color: transparent;
+    width: 280px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+/* Contenedor interno que rota */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s; 
+    transform-style: preserve-3d;
+}
+
+/* Animación de giro al pasar el mouse sobre la tarjeta */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Estilos para el frente y el reverso de la tarjeta */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Estilo del frente de la tarjeta */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Estilo del reverso de la tarjeta */
+.flip-card-back {
+    background-color: #2c3e50; 
+    color: white;
+    transform: rotateY(180deg); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}

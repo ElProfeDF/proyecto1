@@ -1,265 +1,877 @@
+@charset "UTF-8";
+/*
+Estilo Reset
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /* ============================================= */
 /* ESTILOS GENERALES (BASE PARA ESCRITORIO)    */
 /* ============================================= */
 body {
-    margin: 0;
-    font-family: sans-serif;
+  margin: 0;
+  font-family: sans-serif;
 }
 
 /* --- Estilos del Encabezado --- */
 .site-header {
-    background-color: #f8f9fa;
-    padding: 10px 20px;
-    border-bottom: 1px solid #dee2e6;
-    display: flex; 
-    align-items: center;
-    justify-content: space-between; 
-    position: relative; 
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .header-column {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-
 .header-column:first-child {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .header-column:last-child {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .logo-container img {
-    height: 50px; 
-    width: auto;
-    display: block;
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
 .main-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Botón Hamburguesa oculto en escritorio */
 .hamburger-button {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
 }
 
 /* Menú principal en escritorio */
 #main-menu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex; 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
 }
 
 #main-menu li {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 #main-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 5px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
 }
 
 #main-menu li a:hover {
-    color: #9a50ff;
+  color: #9a50ff;
 }
-
 
 /* --- Estilos del Cuerpo --- */
 .features-section {
-    display: flex;
-    flex-direction: column;
-    padding: 60px 5%;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 5%;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature-row {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .feature-column {
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .feature-column img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .text-column .content-wrapper {
-    max-width: 450px;
-    text-align: center;
+  max-width: 450px;
+  text-align: center;
 }
 
 .text-column h2 {
-    margin-bottom: 15px;
-    font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-size: 2.2rem;
 }
 
 .text-column p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
 }
-
 
 /* --- Estilos del Footer --- */
 footer.site-footer {
-    background-color: #f5f5f5; 
-    color: #6f42c1; 
-    padding: 40px 5%;
-    margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  background-color: #f5f5f5;
+  color: #6f42c1;
+  padding: 40px 5%;
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footer-column {
-    flex: 1;
-    flex-basis: 300px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  flex-basis: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-media-links {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .social-media-links a {
-    color: inherit;
-    transition: transform 0.2s ease;
+  color: inherit;
+  transition: transform 0.2s ease;
 }
 
 .social-media-links a:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1rem;
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer-logo img {
-    height: 175px;
-    width: auto;
+  height: 175px;
+  width: auto;
 }
 
+/* ======================================================= */
+/* Estilos para index                               */
+/* ======================================================= */
+/* 1. Estilos para los contenedores full-width en el index */
+.features-section.index {
+  width: 100%;
+}
+
+/* Ajustamos el ancho del contenido solo en las columnas del index */
+.features-section.index .feature-column {
+  max-width: 550px;
+  flex-shrink: 1;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* 2. Definimos las animaciones  */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* 3. Estilos base para CADA contenedor de fila del index */
+.features-section.index .feature-row {
+  padding: 60px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  opacity: 1;
+}
+
+/* Fondos intercalados */
+.features-section.index .feature-row:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.features-section.index .feature-row:nth-child(even) {
+  background-color: #ffffff;
+}
+
+@supports (animation-timeline: view()) {
+  .features-section.index .feature-row {
+    opacity: 0;
+  }
+  /* Asignamos la animación de la derecha a las filas impares */
+  .features-section.index .feature-row:nth-child(odd) {
+    animation: slideInFromRight 1s linear forwards;
+  }
+  /* Asignamos la animación de la izquierda a las filas pares */
+  .features-section.index .feature-row:nth-child(even) {
+    animation: slideInFromLeft 1s linear forwards;
+  }
+  /* Le decimos a la animación que se active con el scroll */
+  .features-section.index .feature-row {
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+}
+/* --- ESTILOS PARA LA SECCIÓN DE IMÁGENES DE SERVICIOS --- */
+/* Contenedor principal de la sección de servicios */
+.features-section.servicios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 40px 20px;
+}
+
+/* Cada una de las tarjetas que contiene una imagen */
+.feature-row.servicios {
+  flex-basis: 320px;
+  flex-grow: 1;
+  max-width: 380px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.feature-row.servicios:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.feature-column.servicios img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- ESTILOS PARA LA PÁGINA NOSOTROS --- */
+/* --- ESTILOS para la sección del encabezado --- */
+.features-section.encabezado.nosotros {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.features-section.encabezado.nosotros .image-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Estilos para la sección de personas (Tarjetas con efecto de giro) --- */
+/* Contenedor principal de las filas de personas */
+.features-section.personas.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+/* Estilo para cada fila */
+.feature-row.personas.nosotros {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Contenedor de la tarjeta para establecer la perspectiva 3D */
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+/* Contenedor interno que rota */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Animación de giro al pasar el mouse sobre la tarjeta */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estilos para el frente y el reverso de la tarjeta */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del frente de la tarjeta */
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilo del reverso de la tarjeta */
+.flip-card-back {
+  background-color: #2c3e50;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/*
+=============================================
+| ESTILOS PÁGINA PROYECTOS                  |
+=============================================
+*/
+/* --- 1. Contenedor Principal  --- */
+/* Este contenedor organiza la página en dos columnas: 25% y 75% */
+.proyectos-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+/* --- 2. Panel Izquierdo (25%) y Animación --- */
+.features-section.proyectos.side {
+  flex: 0 0 25%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.features-section.proyectos.side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Placa de texto violeta que aparece al pasar el mouse */
+.side-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(88, 3, 107, 0.95), rgba(158, 77, 206, 0.95));
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  transform: scale(0.95);
+  transition-property: opacity, transform;
+}
+
+/* Animación al pasar el mouse sobre el panel izquierdo */
+.features-section.proyectos.side:hover img {
+  opacity: 0;
+}
+
+.features-section.proyectos.side:hover .side-text-overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*
+=============================================
+| ESTILOS PÁGINA PROYECTOS                  |
+=============================================
+*/
+/* --- 3. Cuadrícula de Proyectos (75%) --- */
+.features-section.proyectos.cuadricula {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px 0;
+  perspective: 1200px;
+}
+
+/* Contenedor de cada tarjeta individual en la cuadrícula */
+.feature-row.proyectos {
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+/* Animación al pasar el mouse  */
+.feature-row.proyectos:hover {
+  z-index: 100;
+}
+
+/* --- 4. Animación de Giro y Crecimiento de Tarjetas --- */
+.proyecto-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+/* Animación de la tarjeta interna */
+.feature-row.proyectos:hover .proyecto-card {
+  transform: scale(2) rotateY(180deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos comunes para la cara frontal y trasera */
+.proyecto-card-front,
+.proyecto-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.proyecto-card-front {
+  background-color: #ddd;
+}
+
+.proyecto-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proyecto-card-back {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  flex-direction: column;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.proyecto-card-back h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.proyecto-card-back p {
+  font-size: 0.9rem;
+}
+
+/* PRIMERA COLUMNA: */
+.feature-row.proyectos:nth-child(4n-3):hover .proyecto-card {
+  transform-origin: bottom right center;
+}
+
+/* ÚLTIMA COLUMNA: */
+.feature-row.proyectos:nth-child(4n):hover .proyecto-card {
+  transform-origin: bottom left center;
+}
+
+/* PRIMERA FILA:  */
+.feature-row.proyectos:nth-child(-n+4):hover .proyecto-card {
+  transform-origin: top center;
+}
+
+/* TERCERA FILA  */
+.feature-row.proyectos:nth-child(n+9):hover .proyecto-card {
+  transform-origin: bottom center;
+}
+
+/* ESQUINAS */
+/* Esquina superior izquierda */
+.feature-row.proyectos:nth-child(1):hover .proyecto-card {
+  transform-origin: top right center;
+}
+
+/* Esquina superior derecha */
+.feature-row.proyectos:nth-child(4):hover .proyecto-card {
+  transform-origin: top left center;
+}
+
+/* Esquina inferior izquierda (si tienes 9 o más items) */
+.feature-row.proyectos:nth-child(9):hover .proyecto-card {
+  transform-origin: bottom center;
+}
+
+/* Esquina inferior derecha (si tienes 12 o más items) */
+.feature-row.proyectos:nth-child(12):hover .proyecto-card {
+  transform-origin: bottom left center;
+}
+
+/*
+==============================================================
+| AJUSTES DE TAMAÑO Y VISIBILIDAD RESPONSIVOS                |
+==============================================================
+*/
+/* --- Para pantallas grandes (más de 1024px) --- */
+@media (min-width: 1025px) {
+  /* El contenedor principal ocupará el 80% del ancho y estará centrado */
+  .proyectos-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+/* --- Para Tablets (hasta 1024px) --- */
+@media (max-width: 1024px) {
+  /* El contenedor principal ocupa casi todo el ancho para aprovechar el espacio */
+  .proyectos-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+  /* Reducimos la escala de la animación para que la tarjeta no se desborde */
+  .feature-row.proyectos:hover .proyecto-card {
+    transform: scale(1.4) rotateY(180deg);
+  }
+}
+/* --- Para Celulares (hasta 767px) --- */
+@media (max-width: 767px) {
+  /* 1. El contenedor principal apila los elementos verticalmente */
+  .proyectos-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  /* 2. El panel lateral ocupa todo el ancho de la pantalla */
+  .features-section.proyectos.side {
+    flex-basis: 100%;
+    width: 100%;
+    min-height: 350px;
+  }
+  /* 3. La cuadrícula de proyectos se muestra en 2 columnas */
+  .features-section.proyectos.cuadricula {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+/*
+================================
+Estilos contacto
+================================
+*/
+/* 1. Definimos la animación */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* 2. Aplicamos la animación a las secciones del main */
+main .features-section {
+  animation-name: slideInFromRight;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
+
+/* 3. Agregamos un pequeño retraso a la segunda sección para un efecto escalonado */
+main .features-section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+/*
+================================
+Estilos para el Formulario de Contacto
+================================
+*/
+.contact-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-form-container h2 {
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.contact-form-container p {
+  margin-bottom: 30px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.submit-button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
 
 /* ============================================= */
 /* MEDIA QUERIES RESPONSIVE                      */
 /* ============================================= */
-
 /* --- TABLETS (Hasta 992px) --- */
 @media (max-width: 992px) {
-    /* --- Cambios en el Encabezado --- */
-    
-    /* Mostramos el botón hamburguesa */
-    .hamburger-button {
-        display: block; 
-    }
-
-    /* Ocultamos el menú de navegación horizontal */
-    #main-menu {
-        display: none; 
-        
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #f8f9fa;
-        border-top: 1px solid #dee2e6;
-        flex-direction: column;
-        padding: 10px 0;
-        z-index: 1000;
-    }
-    
-        #main-menu.menu-open {
-        display: flex;
-    }
-    
-    #main-menu li {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    #main-menu li a {
-        display: block;
-        padding: 15px;
-        border-bottom: 1px solid #e9ecef;
-    }
-    
-    #main-menu li:last-child a {
-        border-bottom: none;
-    }
-    .text-column h2 {
-        font-size: 1.2rem; /* Reducimos el tamaño de los títulos */
-    }
-    .text-column p {
-        font-size: 0.8rem; /* Reducimos el tamaño de los títulos */
-    }
+  /* --- Cambios en el Encabezado --- */
+  /* Mostramos el botón hamburguesa */
+  .hamburger-button {
+    display: block;
+  }
+  /* Ocultamos el menú de navegación horizontal */
+  #main-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  #main-menu.menu-open {
+    display: flex;
+  }
+  #main-menu li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #main-menu li a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+  }
+  #main-menu li:last-child a {
+    border-bottom: none;
+  }
+  .text-column h2 {
+    font-size: 1.2rem; /* Reducimos el tamaño de los títulos */
+  }
+  .text-column p {
+    font-size: 0.8rem; /* Reducimos el tamaño de los títulos */
+  }
 }
-
-
 /* --- MÓVILES (Hasta 768px) --- */
 @media (max-width: 768px) {
-    /* --- Cambios en el Cuerpo --- */
-    
-    .feature-row {
-        /* Apilamos las columnas de imagen y texto */
-        flex-direction: column;
-    }
-    
-    /* En la segunda fila, invertimos el orden para que la imagen siga arriba */
-    .feature-row:nth-child(2) {
-        flex-direction: column-reverse;
-    }
-
-    .text-column h2 {
-        font-size: 1.4rem; /* Reducimos el tamaño de los títulos */
-    }
-
-    /* --- Cambios en el Footer --- */
-
-    footer.site-footer {
-        flex-direction: column; /* Apilamos las columnas del footer */
-        align-items: center; /* Centramos las columnas apiladas */
-        text-align: center;
-    }
-
-    .contact-item {
-       justify-content: center; /* Centramos los items de contacto */
-    }
-    
+  /* --- Cambios en el Cuerpo --- */
+  .feature-row {
+    /* Apilamos las columnas de imagen y texto */
+    flex-direction: column;
+  }
+  /* En la segunda fila, invertimos el orden para que la imagen siga arriba */
+  .feature-row:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .text-column h2 {
+    font-size: 1.4rem; /* Reducimos el tamaño de los títulos */
+  }
+  /* --- Cambios en el Footer --- */
+  footer.site-footer {
+    flex-direction: column; /* Apilamos las columnas del footer */
+    align-items: center; /* Centramos las columnas apiladas */
+    text-align: center;
+  }
+  .contact-item {
+    justify-content: center; /* Centramos los items de contacto */
+  }
 }
+/* --- ESTILOS GENERALES Y ENCABEZADO --- */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+main {
+  padding-bottom: 60px; /* Espacio antes del pie de página */
+}
+
+/* --- ESTILOS GENERALES Y ENCABEZADO --- */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+main {
+  padding-bottom: 60px; /* Espacio antes del pie de página */
+}
+
+/*# sourceMappingURL=STYLE.CSS.map */
