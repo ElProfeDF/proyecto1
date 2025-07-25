@@ -1,0 +1,39 @@
+
+
+/* --- ESTILOS PARA LA SECCIÓN DE IMÁGENES DE SERVICIOS --- */
+
+/* Contenedor principal de la sección de servicios */
+.features-section.servicios {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 2rem; 
+    padding: 40px 20px; 
+}
+
+/* Cada una de las tarjetas que contiene una imagen */
+.feature-row.servicios {
+    flex-basis: 320px; 
+    flex-grow: 1; 
+    max-width: 380px;
+    
+    background-color: #ffffff;
+    border-radius: 16px; 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.feature-row.servicios:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.feature-column.servicios img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}

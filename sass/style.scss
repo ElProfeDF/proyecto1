@@ -1,0 +1,17 @@
+// MÓDULOS BASE
+@use "base/reset";
+
+// MÓDULOS LAYOUTS
+@use "layouts/header";
+@use "layouts/main";
+@use "layouts/footer";
+
+// MÓDULOS PAGES
+@use "pages/index";
+@use "pages/servicios";
+@use "pages/nosotros";
+@use "pages/proyectos";
+@use "pages/contacto";
+
+// RESPONSIVIDAD
+@use "base/mediaq";

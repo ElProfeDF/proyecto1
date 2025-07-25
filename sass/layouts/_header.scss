@@ -1,0 +1,68 @@
+/* --- Estilos del Encabezado --- */
+.site-header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    position: relative; 
+}
+
+.header-column {
+    display: flex;
+    align-items: center;
+}
+
+
+.header-column:first-child {
+    justify-content: flex-start;
+}
+
+.header-column:last-child {
+    justify-content: flex-end;
+}
+
+.logo-container img {
+    height: 50px; 
+    width: auto;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Botón Hamburguesa oculto en escritorio */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Menú principal en escritorio */
+#main-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; 
+}
+
+#main-menu li {
+    margin-left: 25px;
+}
+
+#main-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#main-menu li a:hover {
+    color: #9a50ff;
+}
